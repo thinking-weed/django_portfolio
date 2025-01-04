@@ -1,0 +1,659 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio_by_Django</title>
+
+    <!-- BootstrapのCSS bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'resume/css/home.css' %}">
+</head>
+<body class="container">
+    <div class="outerwrap">
+        <p class="first_message">
+            本HPをご覧いただきありがとうございます。※連絡先はメニューのContactのところに記載しております。改善点等ありましたら、レビューをpostしていただけるとありがたいです。
+        </p>
+        <div class="main innerwrap">
+            <div class="biography scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div class="article">
+                    <div class="topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/biography_icon.png' %}" alt="プロフィールアイコン">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                            　My Biography（略歴）
+                        </h2>
+                    </div>
+
+                    <div class="accordion biography" id="accordion_biography">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_biography" aria-expanded="false" aria-controls="collapseOne_biography">
+                                    Browse the overview In English
+                                </button>
+                            </h2>
+                            <div id="collapseOne_biography" class="accordion-collapse collapse" data-bs-parent="#accordion_biography">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 leading-relaxed" style="opacity: 1;">
+                                        　After studies about differential equations,Fourier series, and fluid mechanics at University,
+                                        I had taught mathematics and other subjects at a school in Mie for 8 years.<br>
+                                        From Last spring, I started studying programming and design with the help of TECH I.S. and WAS Multimedia PC School.
+                                        Recently,to get a chance thankfully, I've been working for about a year at
+                                        <a href="https://www.chuozuken.co.jp/" class="chuozuken">ChuoZuken,Nagoya</a>
+                                        as a fledgling engineer which makes electronic manuals about aircrafts.Personally, continuing studying programming apart from work,I would like to develop web applications
+                                        that can reduce the burden on busy teachers in Japan and that can be used easily without having to get an account in the future.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_biography" aria-expanded="false" aria-controls="collapseTwo_biography">
+                                日本語での概要
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_biography" class="accordion-collapse collapse" data-bs-parent="#accordion_biography">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        　大学で微分方程式、フーリエ級数、流体力学を学んだ後、三重県の学校で8年間数学などを教えていました。その後去年の春から、TECH I.SとWASパソコンマルチメディアスクールでプログラミングとデザインの勉強を始め、ありがたいことに
+                                        <a href="https://www.chuozuken.co.jp/" class="chuozuken">中央図研（株）,名古屋</a>
+                                        で航空機整備に関する電子マニュアルを作成する駆け出しのエンジニアとして働く機会をいただき、約1年働いたところです。今後は
+                                        プログラミングの勉強は仕事とは別に続け、将来的には日本の多忙な先生方の負担を軽減でき、アカウントを取得せずに簡単に利用できるWebアプリケーションを開発したいと考えています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="myskills scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div>
+                    <div class="skillList topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/skill_icon.png' %}" alt="スキルアイコン">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                            　Programming Language & Flamework, Tools, which has learned or used
+                        </h2>
+                    </div>
+
+                    <div class="accordion myskills" id="accordion_myskills">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_myskills" aria-expanded="false" aria-controls="collapseOne_myskills">
+                                    〇TECH I.S. Curriculum
+                                </button>
+                            </h2>
+                            <div id="collapseOne_myskills" class="accordion-collapse collapse" data-bs-parent="#accordion_myskills">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        <div class="learncontents">
+                                            HTML / CSS / Javascript  / PHP / SQL  / Laravel / Github / Slack / Bootstrap /Heroku
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_myskills" aria-expanded="false" aria-controls="collapseTwo_myskills">
+                                    〇WAS personal-computer multi-media school Curriculum
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_myskills" class="accordion-collapse collapse" data-bs-parent="#accordion_myskills">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        <div class="learncontents">
+                                            Photoshop / Illustrator / teams / basic knowledge about DX・UX marketing and design
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree_myskills" aria-expanded="false" aria-controls="collapseThree_myskills">
+                                    〇What I have personally learned so far
+                                </button>
+                            </h2>
+                            <div id="collapseThree_myskills" class="accordion-collapse collapse" data-bs-parent="#accordion_myskills">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        <div class="learncontents">
+                                            Python3 / Django / Flask / PyTorch /VBA / Javascript / Laravel / Brava! / Acrobat Pro / GeoGebra script / Java
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="WorksAtWas scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div class="article">
+                    <div class="was topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/was_icon.png' %}" alt="WASのロゴ">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                            　Works At WAS PC multi-media school
+                        </h2>
+                    </div>
+
+                    <div class="accordion WorksAtWas" id="accordion_WorksAtWas">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_WorksAtWas" aria-expanded="false" aria-controls="collapseOne_WorksAtWas">
+                                    Browse the overview In English
+                                </button>
+                            </h2>
+                            <div id="collapseOne_WorksAtWas" class="accordion-collapse collapse" data-bs-parent="#accordion_WorksAtWas">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        　I've been learning Photoshop, Illustrator, and basic knowledge about DX・UX marketing and design At WAS for the past three months.
+                                        Finally, by using Photoshop and Illustrator, I trained to make materials for Web pages.
+                                    </p>
+                                </div>
+                                <p>
+                                    <a class="ToWorks" href="{% url 'was_works:was_works_show' %}" >　ToWorks</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_WorksAtWas" aria-expanded="false" aria-controls="collapseTwo_WorksAtWas">
+                                日本語での概要
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_WorksAtWas" class="accordion-collapse collapse" data-bs-parent="#accordion_WorksAtWas">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        　この3ヶ月間、PhotoshopとIllustrator、そしてDX・UXマーケティングとデザインの基礎知識をWASで学びました。
+                                        最終的には、PhotoshopとIllustratorを使い、Webページの素材を作れるように訓練しました。
+                                    </p>
+                                </div>
+                                <p>
+                                    <a class="ToWorks" href="{% url 'was_works:was_works_show' %}" >　職業訓練時の作成物</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="techis_team_development" class="techis_team_development scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div class="article">
+                    <div class="techis_team_development_image topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/techlogo.png' %}" alt="TECH I.S.のロゴ">
+                        <img src="{% static 'resume/images/icons/team-development.png' %}" alt="チーム開発のロゴ">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white; font-size: 1.4rem;">
+                            　Team-Development at TECH I.S（TECH I.S.のカリキュラムの一環としてリンク先の商品管理システムを作成）
+                        </h2>
+                    </div>
+
+                    <div class="accordion techis_team_development" id="accordion_techis_team_development">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_techis_team_development" aria-expanded="false" aria-controls="collapseOne_techis_team_development">
+                                    Browse the overview In English
+                                </button>
+                            </h2>
+                            <div id="collapseOne_techis_team_development" class="accordion-collapse collapse" data-bs-parent="#accordion_techis_team_development">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-black-400 leading-relaxed">
+                                        　As part of the TECH I.S. curriculum, a team of four students including myself and one instructor created a production management system.
+                                        I was mainly responsible for product registration, product search, navigation, layout design, user authentication,
+                                        individual product display, account editing, product content editing, error pattern display, logout functions,
+                                        and system deployment.
+                                    </p>
+                                </div>
+                                <p>
+                                    <a class="ToWorks" href="https://team171-system-9ae6c37d5beb.herokuapp.com/" >　To Work</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_techis_team_development" aria-expanded="false" aria-controls="collapseNine_Qiita_article">
+                                日本語での概要
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_techis_team_development" class="accordion-collapse collapse" data-bs-parent="#accordion_techis_team_development">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        　TECH I.S.のカリキュラムの一環として、受講生４人、講師１人のチームでリンク先の商品管理システムを作成しました。商品登録機能、商品検索機能、
+                                        ナビゲーション、レイアウトデザイン、ユーザー認証機能、商品個別表示機能、アカウント編集機能、商品内容編集機能、エラーパターンの表示機能、ログアウト機能、
+                                        デプロイなどを私は主に担当しました。
+                                    </p>
+                                </div>
+                                <p>
+                                    <a class="ToWorks" href="https://team171-system-9ae6c37d5beb.herokuapp.com/" >　チーム開発：商品管理システム</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Qiita_article" class="Qiita_article scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div class="article">
+                    <div class="Qiita_article_image topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/qiita_icon.png' %}" alt="Qiitaのロゴ">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                            　My Qiita Artcles（プログラミング学習備忘録・数学に関することあれこれ）
+                        </h2>
+                    </div>
+
+                    <div class="accordion Qiita_article" id="accordion_Qiita_article">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_Qiita_article" aria-expanded="false" aria-controls="collapseOne_Qiita_article">
+                                    About Python, Django, Flask, and so on
+                                </button>
+                            </h2>
+                            <div id="collapseOne_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/ec22f887b5643bd260f2">
+                                                １. Pythonがなんか動くようにする
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/40510d7bc6db12ee50db">
+                                                ２. Pyhtonで～.pyファイルを起動する方法が複数あり、できればコンソール（コマンドプロンプト）による方法をオススメする話
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/private/a468b3deccea13710359">
+                                                ３. Pyhtonのスクレイピングに関するライブラリ（beautifulsoup4）公式ドキュメント日本語翻訳案
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/9de1556ccc40904b411c">
+                                                ４. Anacondaを使わず、ScrapyでLaravelで作った自分のポートフォリオをモルモットにしてスクレイピングしてみた
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/a99cac72b455c5e9580f">
+                                                ５. 弱々だけど Flask-SQLAlchemy (ver3.1.x) をQuickStartしたい
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/75a5d1aae46f1d6f079a">
+                                                ６. はじめてのPythonのインタープリター（＝バージョン）グレードダウン
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/dda47b01dff1c294686b">
+                                                ７. pyenvを使わないでpoetryを使えるか検証してみて今更分かったこと
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/79569252644403452d8b">
+                                                ８. Laravel 9 で作ったPortfolioをDjango＆Poetryに移行している際の学習備忘録①～プロジェクトの準備～
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/639e018f91b5787f5874">
+                                                ９. Django&Flaskでほぼ100%エラーになるコメントアウト
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/fc6eb961a63ced70893a">
+                                                １０. Poetry配下におけるDjangoプロジェクトのconfig（settings.py）に関する学習備忘録
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_Qiita_article" aria-expanded="false" aria-controls="collapseTwo_Qiita_article">
+                                    About VBA
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/b322d1e34b888aa3ca22">
+                                                １. VBA学習備忘録①　VBAの良いところを褒めてみる
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/d2e822bfb6e4479a57f6">
+                                                ２. VBA学習備忘録②　個人的Excel マクロ　チートシート①
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/d1ec14728164b5a6178c">
+                                                ３. VBA学習備忘録③　Python等の他言語から見たVBAの独自な文化&方言①
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/e620afb8418b16bfba73">
+                                                ４. VBA学習備忘録④　VBAにも「イミディエイトウィンドウ」というPythonのインタクラティブシェルのようなものがあるらしい
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/6bf5a8a9e8445174d0b9">
+                                                ５. 日報作成等がたぶん気持ち楽になるマクロ（Excel、Wordを名前の日付だけ変更して、その月分だけ複製）
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree_Qiita_article" aria-expanded="false" aria-controls="collapseThree_Qiita_article">
+                                    About Laravel and PHP
+                                </button>
+                            </h2>
+                            <div id="collapseThree_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/ba01c2c46e072a7ebb83">
+                                                １. Laravel等のフレームワークにCSSを当てるには「引き算」が時々必要になると感じた話
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour_Qiita_article" aria-expanded="false" aria-controls="collapseFour_Qiita_article">
+                                    About Others（SQL, Javascript, VScode, Github, and so on）
+                                </button>
+                            </h2>
+                            <div id="collapseFour_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/0a19072e5ec2e54d5e5f">
+                                                １. VScodeの拡張機能のError Lensは誤植等のエラーはもちろん、非推奨コードも指摘してくれる事が分かった件
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/702bc7353edb644e567d">
+                                                ２. チーム開発備忘録①　小規模チーム開発で面倒だったGithub周りの下準備
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/862497a431b23146f069">
+                                                ３. GIthubの操作をミスったときによく使うコマンドメモ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/2e4887848a61749a1130">
+                                                ４. あの日使い始めたXAMPPのDBサーバーの本当の名前を学習当初の僕達はまだ知らない（PaaSを使うときの注意）
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/1a14382db58b8697bae8">
+                                                ５. SQL学習備忘録　Flaskさわってみて久々にSQLをコードに直書きしていたら諸々忘れていたため作ったSQLチートシート①基本4大命令
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/b3d47b72a0015a5deef9">
+                                                ６. SQL学習備忘録　SQLチートシート②SELECT文に関する修飾語１
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/67a2920d53a4a99c456b">
+                                                ７. SQL学習備忘録　SQLチートシート③SELECT文に関する修飾語２
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/d2d3dc575d662576c297">
+                                                ８. SQL学習備忘録　SQLチートシート④SELECT文に関する修飾語３
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/d3419c366686966021d6">
+                                                ９. SQL学習備忘録　チートシート⑤　SELECT文に関する集合演算子
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine_Qiita_article" aria-expanded="false" aria-controls="collapseNine_Qiita_article">
+                                About （statistical）Mathmatics
+                                </button>
+                            </h2>
+                            <div id="collapseNine_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        主に機械学習に関わる統計などの数学の学習を進める中で学習した数学のおススメの勉強法や自分の途中計算の過程を記事にしてみました。
+                                        ※「もし、ここが間違ってるよ」というところがありましたら、お気軽にご連絡ください
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/38a6438ddb1520ed3387">
+                                                １. 確率統計学・統計検定学習備忘録　①条件付き確率　のイメージをつかむ問題
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/1d6c6db04c00b28f724a">
+                                                ２. 確率統計学・統計検定学習備忘録　②統計検定1級2022数理統計　大問2別解・別解説
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/fe820b00b2f3b74f4580">
+                                                ３. で、数学的帰納法って結局何に使うん？（´｡｀)　⇒　例えば、ヴァンデルモンドのたたみ込みの証明とか　⇒「非」復元抽出の公式の導出
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/36a3eadf0035557a1714">
+                                                ４. 確率統計学・統計検定学習備忘録　③標本平均・標本分散（※復元抽出）、数Ⅰと数Bの統計の違い①
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/f8632f54bb33a3c49aaf">
+                                                ５. 確率統計学・統計検定学習備忘録　④標本平均と平均（値）に関する公式の意味の違い
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/8099d221865afd6db3c6">
+                                                ６. ⑤統計検定1級2022数理統計　大問3（１）（２）別解・別解説　ポアソン分布・ガウス分布に関する計算
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/8f0d04e622912c58e05d">
+                                                ７. 統計検定学習備忘録　非復元抽出の標本平均に関する公式等
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/77d0b8aad001f3eb7730">
+                                                ８. 機械学習学習１日目
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/a841534b0cfd7ec96194">
+                                                ９. 数学の勉強法における経験則から来る諸注意（解析学徒の視点から）
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen_Qiita_article" aria-expanded="false" aria-controls="collapseTen_Qiita_article">
+                                About  Changing jobs {{ "as" }} an engineer with no experience
+                                </button>
+                            </h2>
+                            <div id="collapseTen_Qiita_article" class="accordion-collapse collapse" data-bs-parent="#accordion_Qiita_article">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        エンジニアとしての実務未経験からの転職活動を通して感じたこと等を書きました。
+                                    </p>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/3d18e09111af7ed86282">
+                                                １. IT職種見聞録① エンジニアも十人十色（①CAE（※Computer Aided Enginner（ing）））
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="qiita_link" href="https://qiita.com/thinking-weed/items/28d381b9475d854f34f1">
+                                                ２. IT業界未経験からPHP⇒Python⇒Java⇒VBA、XMLと学習言語と転職フェア会場をうろうろして感じたこと
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="NoTenki scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                <div class="article">
+                    <div class="NoTenki_image topic flex rounded-full">
+                        <img src="{% static 'resume/images/icons/No-Tenki.png' %}" alt="NoTenkiのロゴ">
+                        <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                            　NoTenki ～感想用紙やアンケート等の転記・データ集計はもうAIにさせよう～
+                        </h2>
+                    </div>
+
+                    <div class="accordion NoTenki" id="accordion_NoTenki">
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_NoTenki" aria-expanded="false" aria-controls="collapseOne_NoTenki">
+                                    日本語での概要（※設計中）
+                                </button>
+                            </h2>
+                            <div id="collapseOne_NoTenki" class="accordion-collapse collapse" data-bs-parent="#accordion_NoTenki">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                        　この「NoTenki」は「Python」で構築できる「OCR（Optical Character Recognition（/ Reader）、（光学的文字認識≒文字を含む画像の文字部分だけを読み取ってword文章化する技術）」とAIを使って、
+                                        生徒の感想用紙やアンケートなどをpdf化したものを、要約・整理し、Wordや ExcelにまとめてくれるWebアプリです。
+                                        最終的には、学校タブレットのカメラ機能との連携も考えています。<br>
+                                        　※１年あたり１５万程度で導入できる既存の自動採点システムの汎用的なものを想定しています。
+                                        <br>
+                                        <hr class="BorderLine w-full">
+                                        <br>
+                                        　８年間の教員としての学校勤務経験から、日本の教員の長時間労働の原因の一つは、ICT化を進めれば削減できるものの、
+                                        <br>
+                                        <br>　①セキリティの観点から業務のICT化をするのに必要なソフトやプログラムを学校パソコンではダウンロード・インストールが難しい
+                                        <br>　②そもそも物を渡されたからといって、当然他の業界同様、全ての教員がICTに強いわけではない
+                                        <br>　③学校では、アカウント１つをとるのにも非常に時間がかかる
+                                        <br><br>ことが主な原因として挙げられると考えています。そのため、セキリティ性の強いLaravelと連携させ、Vue.jsなどによりユーザービリティの高い、
+                                        アカウントを取らなくても使える設計を計画しています。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_NoTenki" aria-expanded="false" aria-controls="collapseTwo_NoTenki">
+                                    Browse the overview In English（Now Desiging）
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_NoTenki" class="accordion-collapse collapse" data-bs-parent="#accordion_NoTenki">
+                                <div class="accordion-body">
+                                    <p class="mt-4 text-black-500 dark:text-black-400 leading-relaxed">
+                                        "NoTenki" is a web application that uses OCR (Optical Character Recognition/Reader,
+                                        a technology that reads only the text portion of an image containing text and converts it into word text) and AI,
+                                        which can be built into "Python", to summarize and organize student impression forms,
+                                        questionnaires, etc., converted into pdf files, and compile them into Word and Excel.
+                                        The application is a web application that summarizes and organizes student feedback forms, questionnaires, etc.
+                                        , converts them into PDF files, and compiles them into Word and Excel files using AI.
+                                        I am also thinking of eventually integrating with the camera function of school tablets.
+                                    <br>
+                                        I envision a generic version of an existing automated grading system that can be implemented for about 150,000yen per year.
+                                    <br>
+                                        <hr class="BorderLine w-full">
+                                    <br>
+                                        Based on my 8 years of experience working as a teacher, one of the causes of long working hours for teachers in Japan, although it can be reduced if ICT is promoted,
+                                    <br>
+                                        <ol>
+                                            <li>① It is difficult to download and install the necessary software and programs for ICT in terms of security on school computers,</li>
+                                            <li>② Not all teachers are ICT experts just because they are given things to begin with, as in other industries,</li>
+                                            <li>③ It takes a lot of time to get an account at a school.</li>
+                                        </ol>
+                                    <br>Therefore, I am planning to link with Laravel, which is highly secure, and to design a highly usable system with Vue.js, etc., so that users can use the system even without an account.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="DesignDocuments  scale-100 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                    <div class="article">
+                        <div class="DesignDocuments_image topic flex rounded-full">
+                            <img src="{% static 'resume/images/icons/design-documents.png' %}" alt="このポートフォリオの仕様書のロゴ">
+                            <h2 style="-webkit-text-stroke: 0.5px black;color: white;">
+                                　Design_Documents for this portfolio（仕様書）
+                            </h2>
+                        </div>
+
+                        <div class="accordion DesignDocuments" id="accordion_DesignDocuments">
+                            <div class="accordion-item" style="opacity: 0.9;">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_DesignDocuments" aria-expanded="false" aria-controls="collapseOne_DesignDocuments">
+                                        Browse the overview In English
+                                    </button>
+                                </h2>
+                                <div id="collapseOne_DesignDocuments" class="accordion-collapse collapse" data-bs-parent="#accordion_DesignDocuments">
+                                    <div class="accordion-body">
+                                        <a href="#" onclick="event.preventDefault(); Modalshow6()">
+                                            <p class="mt-4 text-black-500 dark:text-black-400 leading-relaxed">
+                                                Please contact me first so I can provide you with the password through email.（パスワードを入力）
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="opacity: 0.9;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo_DesignDocuments" aria-expanded="false" aria-controls="collapseTwo_DesignDocuments">
+                                    日本語の場合
+                                </button>
+                            </h2>
+                            <div id="collapseTwo_DesignDocuments" class="accordion-collapse collapse" data-bs-parent="#accordion_DesignDocuments">
+                                <div class="accordion-body">
+                                    <a href="#" onclick="event.preventDefault(); Modalshow6()">
+                                        <p class="mt-4 text-black-500 dark:text-white-400 leading-relaxed">
+                                            メールを通して、パスワードをお渡ししますので、まずはご連絡ください。（パスワードを入力）
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ml-4 text-left text-sm text-black-500 dark:text-gray-400 sm:text-left sm:ml-0">
+            <p class="reference">　画像やアイコンは以下から引用したものをPhotoshopやIllustratorで加工したものを利用しています。</p><br>
+                <ul>
+                    <li>unsplash　(<a href="https://unsplash.com/ja">https://unsplash.com/ja</a>)</li>
+                    
+                    <li>Font Awesome　(<a href="https://fontawesome.com/search?o=r&m=free">https://fontawesome.com/search?o=r&m=free</a>)</li>
+                </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
