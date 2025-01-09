@@ -1,7 +1,11 @@
-import sys
+import sys ,random, string 
 import img2pdf
 import os
 from datetime import datetime
+
+
+def randomname(n):
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=n))
 
 def convert_pdf():  # 1つの画像をPDF化するプログラム
     try:

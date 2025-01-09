@@ -207,3 +207,6 @@ SESSION_SAVE_EVERY_REQUEST = True
 # ファイルを保存するには、settings.pyでMEDIA_ROOTとMEDIA_URLを設定する必要があるらしい
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+AUTH_USER_MODEL = 'acrobat_paro.User'
