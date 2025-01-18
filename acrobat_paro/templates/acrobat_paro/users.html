@@ -23,7 +23,8 @@
                     </tr>
                 {% for userdata in userdatas %}
                     <tr>
-                        <td>{{ forloop.counter }}</td>
+                        <td>{{ forloop.counter }}</td> 
+                        <!-- forloop.counterで１をスタートとしてループ回数を取り出す -->
                         <td>{{ userdata.username }}</td>
                         <td>{{ userdata.email }}</td>
                         <td>{{ userdata.last_name }}</td>

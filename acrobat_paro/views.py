@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from acrobat_paro.models import Created_PDF,User,Partner_Company
+from acrobat_paro.models import User
 
 from django_portfolio import settings
 

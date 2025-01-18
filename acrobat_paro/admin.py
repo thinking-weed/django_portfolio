@@ -13,7 +13,13 @@ class Created_PDF_Admin(admin.ModelAdmin):
 class CustomUserAdmin(UserAdmin):
     model = User
     # 管理ツール画面のリスト表示で表示するフィールドを指定、管理ツール画面の並びも以下のリストに従う
-    list_display = ['id', 'username', 'email', 'is_staff', 'is_active']
+    list_display = ['id',
+                    'username', 
+                    'email', 
+                    'is_staff', #ユーザーが管理画面（Django Admin）にアクセスできるか権限があるかどうか
+                    'is_active',#ユーザーアカウントがアクティブかどうか(ログインできるか否か)
+                    'is_superuser'#管理者権限か否か
+                ]
 
 admin.site.register(Partner_Company)
-#admin.site.registerは管理ツールに登録するメソッド
+# admin.site.registerは管理ツールに登録するメソッド
