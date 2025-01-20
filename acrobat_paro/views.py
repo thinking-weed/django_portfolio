@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from acrobat_paro.models import User
 
 from django_portfolio import settings
 
@@ -12,10 +11,3 @@ def menu_show(request):
         'pdf_url_prefix':pdf_url_prefix
     }
     return render(request, 'acrobat_paro/menu.html', params)
-
-def users_index(request):
-    userdatas = User.objects.all() #Userの全レコードを取得する
-    params = {
-        'userdatas':userdatas
-    }
-    return render(request, 'acrobat_paro/users.html', params)

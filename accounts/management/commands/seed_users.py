@@ -1,7 +1,7 @@
 import random
 from django.core.management.base import BaseCommand
-from acrobat_paro.models import User
-from acrobat_paro.functions import randomname
+from accounts.models import User
+from accounts.functions import randomname
 from django.contrib.auth.hashers import make_password
 from faker import Faker
 

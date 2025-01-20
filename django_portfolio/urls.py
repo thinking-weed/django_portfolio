@@ -24,13 +24,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form_components/', include('form_components.urls')),
-    path('crud_components/', include('crud_components.urls')),
     #includeという関数は、引数に指定したモジュールを読み込む
     #これで、component内のアドレス割り当ては、すべてcomponentフォルダ内にあるurls.pyに任せることができる
     #/component/というのがprefixのようになっている状態
     #/component/sample1/というエンドポイントを作成するときは、componentフォルダ内にあるurls.pyに 'sample1/'というのを設定する
     path('was_works/', include('was_works.urls')),
     path('acrobat_paro/', include('acrobat_paro.urls')),
+    path('accounts/', include('accounts.urls')),
     path('', include('resume.urls'))
 ]
 
