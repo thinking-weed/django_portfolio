@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 class Created_PDF(models.Model):
     #migrationsのinitial.pyを見ると分かるように、Djangoでは、明示的にAutoFieldを指定しなくても、
@@ -13,7 +14,28 @@ class Created_PDF(models.Model):
     def __str__(self):
         return f'<CreatedPdf:id={self.id}, {self.file_name}: {self.description}>'
 
-
+class User(AbstractUser):
+    # 必要に応じて追加フィールドを定義
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='acrobat_paro_user_set',  # 変更
+        blank=True,
+        help_text='The groups this user belongs to.',
+        verbose_name='groups',
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='acrobat_paro_user_permissions_set',  # 変更
+        blank=True,
+        help_text='Specific permissions for this user.',
+        verbose_name='user permissions',
+    )
+    def __str__(self):
+        return self.username
+    
 class Partner_Company(models.Model):
     name = models.CharField(max_length=100)
     mail = models.EmailField(max_length=200)
@@ -24,3 +46,4 @@ class Partner_Company(models.Model):
         return '<Partner_Company:id=' + str(self.id) + ', ' + self.name +\
             '(' + str(self.mail) + ', ' + str(self.phone_number) + ')>'
     # 管理ツールで登録したレコードを表示するときにどのように表示されるか
+

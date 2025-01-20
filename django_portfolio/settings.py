@@ -52,9 +52,10 @@ INSTALLED_APPS = [
     'django_extensions',
     'resume', #resumeアプリケーションの登録
     'form_components', #form_componentsアプリケーションの登録
-    'crud_components',
     'was_works',
-    'acrobat_paro'
+    'acrobat_paro',
+    'accounts',
+    'APIs'
 ]
 
 MIDDLEWARE = [
@@ -208,5 +209,6 @@ SESSION_SAVE_EVERY_REQUEST = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-AUTH_USER_MODEL = 'acrobat_paro.User'
+# 認証に使用するユーザーモデルをカスタムユーザに変更
+# （これがない場合、デフォルトのUserモデルが認証に使われる設定になっている）
+AUTH_USER_MODEL = 'accounts.User'
