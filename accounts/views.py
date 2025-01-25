@@ -12,3 +12,6 @@ def users_index(request):
         'userdatas':userdatas
     }
     return render(request, 'accounts/users.html', params)
+
+def checked_users(request):
+    pass
