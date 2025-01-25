@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form_components/', include('form_components.urls')),
+    path('apis/', include('APIs.urls')),
     #includeという関数は、引数に指定したモジュールを読み込む
     #これで、component内のアドレス割り当ては、すべてcomponentフォルダ内にあるurls.pyに任せることができる
     #/component/というのがprefixのようになっている状態
