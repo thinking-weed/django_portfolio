@@ -13,31 +13,19 @@
 <body class="container">
     <div class="outerwrap">
         <h1 class="display-4 text-primary">{{ title }}</h1>
-        <p class="h5 mt-4">{{ message|safe }}</p>
-        <form action="{% url 'accounts:checked_index' %}" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="click">
-        </form>
-        <hr>
+        <p class="h5 mt-4">{{ userdatas }}</p>
+        <!-- 表示結果からQuerySetというクラスのインスタンスをallで取り出していることが分かる -->
         <div class="main innerwrap">
             <table class="table">
                     <tr>
-                        <th>ID</th>
-                        <th>USERNAME</th>
-                        <th>EMAIL</th>
-                        <th>LAST_NAME</th>
+                        <th>userdata</th>
                     </tr>
-                    {% for userdata in userdatas %}
-                        <tr>
-                            <td>{{ userdata.id }}</td> 
-                            <!-- forloop.counterで１をスタートとしてループ回数を取り出す -->
-                            <td>{{ userdata.username }}</td>
-                            <td>{{ userdata.email }}</td>
-                            <td>{{ userdata.last_name }}</td>
-                        </tr>
-                    {% endfor %}
-                </table>
+                {% for userdata in userdatas %}
+                    <tr>
+                        <td>{{ userdata }}</td> 
+                    </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
     <footer>

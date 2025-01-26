@@ -1,4 +1,4 @@
 from django import forms
 
-class UserForm(forms.Form):
+class CheckedUserForm(forms.Form):
     id = forms.IntegerField(label='ID')
