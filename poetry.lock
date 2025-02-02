@@ -347,6 +347,14 @@ gssapi = ["gssapi (==1.8.3)"]
 telemetry = ["opentelemetry-api (==1.18.0)", "opentelemetry-sdk (==1.18.0)", "opentelemetry-exporter-otlp-proto-http (==1.18.0)"]
 
 [[package]]
+name = "package"
+version = "0.1.1"
+description = "package is a package to package your package"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "packaging"
 version = "24.2"
 description = "Core utilities for Python packages"
@@ -666,7 +674,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "574cd716bb51d89f265e22c6c88546a8a3b36cb6c07c0d8a12fc33d46a3d3c96"
+content-hash = "fc37b56bb7d386454682f25fd3e38fd8b611effad30503dc00fd1a0d0e3e6cc7"
 
 [metadata.files]
 aiosqlite = []
@@ -696,6 +704,7 @@ img2pdf = []
 iniconfig = []
 lxml = []
 mysql-connector-python = []
+package = []
 packaging = []
 pikepdf = []
 pillow = []

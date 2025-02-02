@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'was_works',
     'acrobat_paro',
     'accounts',
-    'APIs'
+    'APIs',
+    'fastapi'
 ]
 
 MIDDLEWARE = [

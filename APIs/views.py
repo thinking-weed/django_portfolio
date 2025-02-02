@@ -1,7 +1,5 @@
-from django.shortcuts import render
 from django.http import JsonResponse
 from APIs.functions import get_address_from_zipcode  # 別ファイルの関数をインポート
-from fastapi import FastAPI
 
 def postcode_search(request):
     """郵便番号を元に住所を検索するAPIビュー"""
@@ -15,9 +13,3 @@ def postcode_search(request):
                         json_dumps_params={"ensure_ascii": False}
                         )
 
-#------------------------------以下 FASTAPIの処理---------------------------------------
-
-# FastAPIのインスタンスを作成
-app = FastAPI()
-
-#GETかつエンドポイント
