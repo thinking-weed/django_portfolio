@@ -28,6 +28,6 @@ def postcode_search(zip_code):
 # コマンドライン引数を受け取る
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("郵便番号を指定してください。例: python scripts/postcode_search.py 7830060")
+        print("郵便番号を指定してください。例: python scripts/postcode_search.py 1000000")
     else:
         postcode_search(sys.argv[1])
