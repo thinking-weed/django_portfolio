@@ -90,6 +90,14 @@ optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 
 [[package]]
+name = "defusedxml"
+version = "0.7.1"
+description = "XML bomb protection for Python stdlib modules"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
 name = "deprecated"
 version = "1.2.15"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
@@ -245,6 +253,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "http"
+version = "0.02"
+description = "HTTP library for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "httpcore"
 version = "1.0.7"
 description = "A minimal low-level HTTP client."
@@ -261,6 +277,28 @@ asyncio = ["anyio (>=4.0,<5.0)"]
 http2 = ["h2 (>=3,<5)"]
 socks = ["socksio (>=1.0.0,<2.0.0)"]
 trio = ["trio (>=0.22.0,<1.0)"]
+
+[[package]]
+name = "httpie"
+version = "3.2.4"
+description = "HTTPie: modern, user-friendly command-line HTTP client for the API era."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+charset-normalizer = ">=2.0.0"
+colorama = {version = ">=0.2.4", markers = "sys_platform == \"win32\""}
+defusedxml = ">=0.6.0"
+multidict = ">=4.7.0"
+Pygments = ">=2.5.2"
+requests = {version = ">=2.22.0", extras = ["socks"]}
+requests-toolbelt = ">=0.9.1"
+rich = ">=9.10.0"
+
+[package.extras]
+dev = ["pytest", "pytest-httpbin (>=0.0.6)", "responses", "pytest-mock", "werkzeug (<2.1.0)", "flake8", "flake8-comprehensions", "flake8-deprecated", "flake8-mutable", "flake8-tuple", "pyopenssl", "pytest-cov", "pyyaml", "twine", "wheel", "jinja2"]
+test = ["pytest", "pytest-httpbin (>=0.0.6)", "responses", "pytest-mock", "werkzeug (<2.1.0)"]
 
 [[package]]
 name = "httpx"
@@ -333,6 +371,46 @@ htmlsoup = ["beautifulsoup4"]
 source = ["Cython (>=3.0.11)"]
 
 [[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+description = "Python port of markdown-it. Markdown parsing, done right!"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+mdurl = ">=0.1,<1.0"
+
+[package.extras]
+benchmarking = ["psutil", "pytest", "pytest-benchmark"]
+code_style = ["pre-commit (>=3.0,<4.0)"]
+compare = ["commonmark (>=0.9,<1.0)", "markdown (>=3.4,<4.0)", "mistletoe (>=1.0,<2.0)", "mistune (>=2.0,<3.0)", "panflute (>=2.3,<3.0)"]
+linkify = ["linkify-it-py (>=1,<3)"]
+plugins = ["mdit-py-plugins"]
+profiling = ["gprof2dot"]
+rtd = ["mdit-py-plugins", "myst-parser", "pyyaml", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinx-book-theme", "jupyter-sphinx"]
+testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+description = "Markdown URL utilities"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "multidict"
+version = "6.1.0"
+description = "multidict implementation"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+typing-extensions = {version = ">=4.1.0", markers = "python_version < \"3.11\""}
+
+[[package]]
 name = "mysql-connector-python"
 version = "9.1.0"
 description = "A self-contained Python driver for communicating with MySQL servers, using an API that is compliant with the Python Database API Specification v2.0 (PEP 249)."
@@ -345,14 +423,6 @@ dns-srv = ["dnspython (==2.6.1)"]
 fido2 = ["fido2 (==1.1.2)"]
 gssapi = ["gssapi (==1.8.3)"]
 telemetry = ["opentelemetry-api (==1.18.0)", "opentelemetry-sdk (==1.18.0)", "opentelemetry-exporter-otlp-proto-http (==1.18.0)"]
-
-[[package]]
-name = "package"
-version = "0.1.1"
-description = "package is a package to package your package"
-category = "main"
-optional = false
-python-versions = "*"
 
 [[package]]
 name = "packaging"
@@ -439,6 +509,17 @@ python-versions = ">=3.8"
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pygments"
+version = "2.19.1"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+windows-terminal = ["colorama (>=0.4.6)"]
+
+[[package]]
 name = "pyocr"
 version = "0.8.5"
 description = "A Python wrapper for OCR engines (Tesseract, Cuneiform, etc)"
@@ -452,6 +533,14 @@ Pillow = "*"
 [package.extras]
 dev = ["pytest"]
 lint = ["flake8"]
+
+[[package]]
+name = "pysocks"
+version = "1.7.1"
+description = "A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pytest"
@@ -506,11 +595,39 @@ python-versions = ">=3.8"
 certifi = ">=2017.4.17"
 charset-normalizer = ">=2,<4"
 idna = ">=2.5,<4"
+PySocks = {version = ">=1.5.6,<1.5.7 || >1.5.7", optional = true, markers = "extra == \"socks\""}
 urllib3 = ">=1.21.1,<3"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "requests-toolbelt"
+version = "1.0.0"
+description = "A utility belt for advanced users of python-requests"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+requests = ">=2.0.1,<3.0.0"
+
+[[package]]
+name = "rich"
+version = "13.9.4"
+description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.dependencies]
+markdown-it-py = ">=2.2.0"
+pygments = ">=2.13.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.11\""}
+
+[package.extras]
+jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
 name = "six"
@@ -674,7 +791,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "fc37b56bb7d386454682f25fd3e38fd8b611effad30503dc00fd1a0d0e3e6cc7"
+content-hash = "6d672b355722e5b85e8ab1249b58726026cfa9768718ad13d4047da704d5d57f"
 
 [metadata.files]
 aiosqlite = []
@@ -685,6 +802,7 @@ certifi = []
 charset-normalizer = []
 click = []
 colorama = []
+defusedxml = []
 deprecated = []
 django = []
 django-environ = []
@@ -697,25 +815,33 @@ faker = []
 fastapi = []
 greenlet = []
 h11 = []
+http = []
 httpcore = []
+httpie = []
 httpx = []
 idna = []
 img2pdf = []
 iniconfig = []
 lxml = []
+markdown-it-py = []
+mdurl = []
+multidict = []
 mysql-connector-python = []
-package = []
 packaging = []
 pikepdf = []
 pillow = []
 pluggy = []
 pydantic = []
 pydantic-core = []
+pygments = []
 pyocr = []
+pysocks = []
 pytest = []
 python-dateutil = []
 python-dotenv = []
 requests = []
+requests-toolbelt = []
+rich = []
 six = []
 sniffio = []
 speechrecognition = []

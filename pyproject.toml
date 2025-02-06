@@ -28,6 +28,7 @@ SQLAlchemy = "^2.0.37"
 aiosqlite = "^0.20.0"
 pydantic = "^2.10.5"
 pydantic-core = "^2.27.2"
+httpie = "^3.2.4"
 
 [tool.poetry.dev-dependencies]
 
