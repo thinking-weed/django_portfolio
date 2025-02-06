@@ -37,9 +37,6 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-#'*'は全て許可を意味する本番環境では注意
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -58,6 +55,9 @@ INSTALLED_APPS = [
     'APIs',
     'fastapi'
 ]
+
+ALLOWED_HOSTS = ['*']
+#'*'は全て許可を意味する本番環境では注意
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
