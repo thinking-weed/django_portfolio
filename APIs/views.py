@@ -1,7 +1,7 @@
 from django.http import JsonResponse,HttpResponse
 # 別ファイルの関数をインポート
 from APIs.functions import get_address_from_zipcode
-from APIs.typehints_sample import add
+from APIs.typehints_sample import add,greet
 
 def postcode_search(request):
     """郵便番号を元に住所を検索するAPIビュー"""
@@ -19,6 +19,7 @@ def postcode_search(request):
                         )
 
 def typehints_sample(request):
-    result_add = add(10, 20)
-    return HttpResponse(result_add)
+    params = (add(10, 20), greet('hogehoge'))
+    result = "<br>".join(params)  # 複数の文字列を `<br>` で結合
+    return HttpResponse(result)
 

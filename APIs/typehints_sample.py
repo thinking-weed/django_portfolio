@@ -5,4 +5,7 @@ def add(num1: int, num2: int) -> str:
     result:str = '足し算結果=>'
     return result + str(num1 + num2)
 
-
+#文字列型の「型ヒント」
+#引数：文字列型、戻り値：文字列型
+def greet(name:str) ->str:
+    return f"おはよう!{name}!"
