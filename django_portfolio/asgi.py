@@ -2,12 +2,12 @@
 # FastAPI のような ASGI アプリを正しく組み込む必要があるらしい
 
 import os
-import django
-from django.core.asgi import get_asgi_application
-from fastapi import FastAPI
-from starlette.middleware.wsgi import WSGIMiddleware
-from starlette.routing import Mount
-from starlette.applications import Starlette
+import django # type: ignore
+from django.core.asgi import get_asgi_application # type: ignore
+from fastapi import FastAPI # type: ignore
+from starlette.middleware.wsgi import WSGIMiddleware # type: ignore
+from starlette.routing import Mount # type: ignore
+from starlette.applications import Starlette # type: ignore
 
 
 # Django 環境変数を設定
@@ -24,7 +24,7 @@ fastapi_app = FastAPI()
 
 @fastapi_app.get("/")
 async def get_hello():
-    return {"message": "Hello World"}
+    return {'message': 'Hello World'}
 
 # FastAPI のエンドポイントを `/fastapi/` にマウント
 app = Starlette(routes=[

@@ -253,14 +253,6 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "http"
-version = "0.02"
-description = "HTTP library for Python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "httpcore"
 version = "1.0.7"
 description = "A minimal low-level HTTP client."
@@ -423,6 +415,14 @@ dns-srv = ["dnspython (==2.6.1)"]
 fido2 = ["fido2 (==1.1.2)"]
 gssapi = ["gssapi (==1.8.3)"]
 telemetry = ["opentelemetry-api (==1.18.0)", "opentelemetry-sdk (==1.18.0)", "opentelemetry-exporter-otlp-proto-http (==1.18.0)"]
+
+[[package]]
+name = "orjson"
+version = "3.10.15"
+description = "Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy"
+category = "main"
+optional = false
+python-versions = ">=3.8"
 
 [[package]]
 name = "packaging"
@@ -791,7 +791,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "6d672b355722e5b85e8ab1249b58726026cfa9768718ad13d4047da704d5d57f"
+content-hash = "7aea363fcab4187ee44d4a5cbabd50c676eace12a000f8bf683983a19559b801"
 
 [metadata.files]
 aiosqlite = []
@@ -815,7 +815,6 @@ faker = []
 fastapi = []
 greenlet = []
 h11 = []
-http = []
 httpcore = []
 httpie = []
 httpx = []
@@ -827,6 +826,7 @@ markdown-it-py = []
 mdurl = []
 multidict = []
 mysql-connector-python = []
+orjson = []
 packaging = []
 pikepdf = []
 pillow = []

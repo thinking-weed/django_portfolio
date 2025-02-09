@@ -1,6 +1,7 @@
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 # 別ファイルの関数をインポート
 from APIs.functions import get_address_from_zipcode
+from APIs.typehints_sample import add
 
 def postcode_search(request):
     """郵便番号を元に住所を検索するAPIビュー"""
@@ -16,4 +17,8 @@ def postcode_search(request):
     return JsonResponse(response_data,
                         json_dumps_params={"ensure_ascii": False}
                         )
+
+def typehints_sample(request):
+    result_add = add(10, 20)
+    return HttpResponse(result_add)
 
