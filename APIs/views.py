@@ -13,6 +13,7 @@ from APIs.typehints_sample1 import (
     count_characters,
     )
 from APIs.typehints_sample2 import get_profile
+from APIs.typehints_sample3 import process_value
 
 def postcode_search(request):
     """郵便番号を元に住所を検索するAPIビュー"""
@@ -54,19 +55,25 @@ def typehints_sample1(request):
         f"{'、'.join(f'{key}: {value}' for key, value in count_characters(sample_list2).items())})"]
     # 各要素を個別に文字列化し、改行（<br>）で結合
     results = "<br>".join(str(param) for param in params)
-    #paramsの後ろに if param is not Noneを追記すると
+    #paramsの後ろに if param is not Noneを追記すると、Noneがparamsに入らないのでNoneが表示されない
     return HttpResponse(results)
 
 # ---------------------------------------------------------------------------------------------------
 
 def typehints_sample2(request):
-    user_profile = get_profile(email= 'user@example.com')
-    return HttpResponse(json.dumps(user_profile), content_type="application/json")
+    uncomplete_profile = get_profile(email= 'user@example.com')
+    complete_profile = get_profile(email= 'user@example.com',username='hogehoge',age=30)
+    params = [uncomplete_profile,complete_profile]
+    # 各要素を個別に文字列化し、改行（<br>）で結合
+    results = "<br>".join(str(param) for param in params)
+    return HttpResponse(results)
 
-
-
-
-
+def typehints_sample3(request):
+    try:
+        result = process_value(200)
+        return HttpResponse(result)
+    except ValueError as e:
+        return HttpResponse(e)
 
 
 
